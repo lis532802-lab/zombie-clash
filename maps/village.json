@@ -1,0 +1,9 @@
+{
+  "villageName": "Sanctuary Haven",
+  "initialBuildings": [
+    { "id": "bldg_townhall", "gridX": 25, "gridY": 25 },
+    { "id": "bldg_wall", "gridX": 24, "gridY": 23 },
+    { "id": "bldg_wall", "gridX": 25, "gridY": 23 },
+    { "id": "bldg_wall", "gridX": 26, "gridY": 23 }
+  ]
+}
