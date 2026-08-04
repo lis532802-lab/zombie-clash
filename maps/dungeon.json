@@ -1,0 +1,7 @@
+{
+  "dungeonName": "The Infected Catacombs",
+  "recommendedLevel": 5,
+  "bossType": "zombie_boss",
+  "waves": 3,
+  "lootMultiplier": 2.5
+}
