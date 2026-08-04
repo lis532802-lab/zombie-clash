@@ -1,0 +1,64 @@
+/* Quest Log & Detailed HUD Overlay Elements */
+#quest-tracker {
+    position: absolute;
+    top: 150px;
+    left: 15px;
+    width: 240px;
+    background: rgba(15, 20, 28, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 12px;
+    color: #e2e8f0;
+    pointer-events: auto;
+}
+
+#quest-tracker h4 {
+    color: #f6e05e;
+    font-size: 13px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quest-item {
+    margin-bottom: 8px;
+}
+
+.quest-item .title {
+    font-weight: bold;
+    color: #fff;
+}
+
+.quest-item .progress {
+    color: #a0aec0;
+    font-size: 11px;
+}
+
+/* Worker Assignment Card Styling */
+.worker-card {
+    background: #2d3748;
+    border: 1px solid #4a5568;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.worker-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.worker-role-select {
+    background: #1a202c;
+    color: #fff;
+    border: 1px solid #4a5568;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+}
