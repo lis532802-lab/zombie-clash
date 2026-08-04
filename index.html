@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Zombie Clash - Base Building & Survival ARPG</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Phaser 3 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+</head>
+<body>
+    <div id="game-container"></div>
+
+    <!-- UI Overlay Layer -->
+    <div id="ui-overlay">
+        <!-- Top Stats Bar -->
+        <div id="top-bar">
+            <div class="stat-group">
+                <div class="stat-item"><span class="icon">🪵</span> Wood: <span id="res-wood">100</span></div>
+                <div class="stat-item"><span class="icon">🪨</span> Stone: <span id="res-stone">50</span></div>
+                <div class="stat-item"><span class="icon">⛓️</span> Iron: <span id="res-iron">20</span></div>
+                <div class="stat-item"><span class="icon">🪙</span> Gold: <span id="res-gold">200</span></div>
+                <div class="stat-item"><span class="icon">🌾</span> Food: <span id="res-food">50</span></div>
+                <div class="stat-item"><span class="icon">🧑‍🤝‍🧑</span> Pop: <span id="res-pop">2/10</span></div>
+            </div>
+
+            <div class="time-group">
+                <div id="time-display">Day 1 - 08:00 AM</div>
+                <div id="weather-display">☀️ Clear</div>
+                <div id="wave-warning" class="hidden">⚠️ NIGHT HORDE APPROACHING! ⚠️</div>
+            </div>
+        </div>
+
+        <!-- Left Status Bars (Player) -->
+        <div id="player-status">
+            <div class="bar-container">
+                <div class="bar-label">HP</div>
+                <div class="bar-bg"><div id="hp-bar" class="bar-fill hp" style="width: 100%;"></div></div>
+                <span id="hp-text">100/100</span>
+            </div>
+            <div class="bar-container">
+                <div class="bar-label">STAMINA</div>
+                <div class="bar-bg"><div id="stamina-bar" class="bar-fill stamina" style="width: 100%;"></div></div>
+                <span id="stamina-text">100/100</span>
+            </div>
+            <div class="bar-container">
+                <div class="bar-label">XP (Lv <span id="player-lvl">1</span>)</div>
+                <div class="bar-bg"><div id="xp-bar" class="bar-fill xp" style="width: 0%;"></div></div>
+                <span id="xp-text">0/100</span>
+            </div>
+        </div>
+
+        <!-- Action / Shortcut Toolbar -->
+        <div id="action-bar">
+            <button class="action-btn" id="btn-build">🛠️ Build (B)</button>
+            <button class="action-btn" id="btn-craft">⚔️ Craft (C)</button>
+            <button class="action-btn" id="btn-inventory">🎒 Inventory (I)</button>
+            <button class="action-btn" id="btn-skills">⭐ Skills (K)</button>
+            <button class="action-btn" id="btn-save">💾 Save Game</button>
+        </div>
+
+        <!-- Minimap Canvas -->
+        <div id="minimap-container">
+            <canvas id="minimap" width="140" height="140"></canvas>
+        </div>
+
+        <!-- Notifications Toast -->
+        <div id="notification-area"></div>
+
+        <!-- Modal Windows -->
+        <!-- Build Menu -->
+        <div id="modal-build" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Construction Menu</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="building-grid" id="building-options"></div>
+            </div>
+        </div>
+
+        <!-- Crafting Menu -->
+        <div id="modal-craft" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Blacksmith & Crafting</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="crafting-grid" id="crafting-options"></div>
+            </div>
+        </div>
+
+        <!-- Skills Menu -->
+        <div id="modal-skills" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Commander Skill Tree (Points: <span id="skill-points-val">0</span>)</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="skills-list" id="skills-options"></div>
+            </div>
+        </div>
+
+        <!-- Inventory Menu -->
+        <div id="modal-inventory" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Inventory & Gear</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div id="inventory-slots" class="inventory-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dynamic Game Scripts -->
+    <script src="js/SoundEngine.js"></script>
+    <script src="js/TextureGenerator.js"></script>
+    <script src="js/GameState.js"></script>
+    <script src="js/Entities.js"></script>
+    <script src="js/BuildingSystem.js"></script>
+    <script src="js/UIManager.js"></script>
+    <script src="js/MainScene.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
