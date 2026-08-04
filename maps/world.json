@@ -1,0 +1,13 @@
+{
+  "tileSize": 64,
+  "width": 50,
+  "height": 50,
+  "spawnPoint": { "x": 1600, "y": 1600 },
+  "resourceAnchors": [
+    { "type": "node_wood", "x": 400, "y": 500 },
+    { "type": "node_wood", "x": 480, "y": 520 },
+    { "type": "node_stone", "x": 1200, "y": 800 },
+    { "type": "node_iron", "x": 2200, "y": 1800 }
+  ],
+  "safeZoneRadius": 400
+}
